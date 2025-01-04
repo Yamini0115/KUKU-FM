@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body style="text-align: center;margin-top: 100px;background-image: url(images\ \(1\).jpg);">
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <span style="color: red;">KUKU</span><span style="color: white; background-color: red;">FM</span>
+      </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+<!-- header items -->
+        <ul class="navbar-nav mx-auto ">
+          <li class="nav-item">
+            <a class="nav-link" href="//community.kukufm.com/login/" target="_blank" style="color: crimson;">Creators</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://kukufm.com/about-us" target="_blank" style="color: crimson;">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contact.html" style="color: crimson;">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://kukufm.com/blog/" target="_blank" style="color: crimson;">Blogs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://kukufm.com/careers" target="_blank" style="color: crimson;">Careers</a>
+          </li>
+        </ul>
+  
+<!-- Search box and language selector -->
+     <form class="d-flex">
+       <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+         <select class="form-select me-2" aria-label="Select language">
+            <option selected>Languages</option>
+            <option value="tamil">Tamil</option>
+            <option value="english">English</option>
+            <option value="hindi">Hindi</option>
+         </select>
+         <button style="color: red;"> <a href="login.html">LOGIN</a></button>
+    </form>
+    </div>
+    </div>
+  </nav>
+  <br><br>
+<!-- this is define button including heading and audio -->
+    <img style="border: 3px solid red;" src="2dd1ba11b195445494dcb4b1e5db14bb.webp" width="300px" height="200" ><br><br>
+    <h3 style="color: white;">Bollywood murder-death case</h3><br>
+    <button id="myButton">Play</button><br><br>
+    <button id="myButton1">Pause</button><br><br>
+   <audio controls autoplay>
+    <source src="C:\Users\Yamini\OneDrive\Documents\Desktop\project vs\.vscode\WhatsApp Audio 2024-09-25 at 13.18.39_67842a38.mp3" type="audio/ogg">
+    <source src="#Flute_#Navin_#KaathuvaakulaRenduKaadhal_#NaanPizhai_#TamilRingTones.mp3" type="audio/mpeg">
+    </audio>
+</body>
+
+
+
+<script>
+// Create a function that returns a Promise
+  function myAsyncFunction() {
+      return new Promise((resolve, reject) => {
+// Simulate an asynchronous operation (like fetching data or a timeout)
+        setTimeout(() => {
+          const success = true // Random success or failure
+          if (success) {
+            resolve("Check your internet connection!");
+          } else {
+            reject("enjoy this song");
+          }
+        }, 2000); // 2 seconds delay
+      });
+    }
+
+// Attach the onclick event to the button
+    document.getElementById("myButton").onclick = function() {
+// When the button is clicked, call the async function that returns a promise
+      myAsyncFunction()
+        .then(result => {
+// If the promise resolves successfully
+          alert(result); // "Operation was successful!"
+        })
+        .catch(error => {
+// If the promise rejects
+          alert(error); // "Operation failed."
+        });
+    };
+</script>
+</html>

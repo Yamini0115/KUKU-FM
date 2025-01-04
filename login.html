@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- create login page using form validation -->
+<body style="background-image: url('images\ \(1\).jpg'); text-align: center; margin-top: 200px;margin-left: -30px;">
+        <div class="log">
+            <h1>KUKU FM Login</h1>
+            <form >
+                <input type="email" placeholder="Email" id="email" required>
+                <input type="password" placeholder="Password" id="password" required>
+                <button type="button" class="btn btn-success btn-lg " onclick="validateform()">Login</button>
+                <p id="errormessages" style="color: red;"></p>
+            </form>
+    
+        
+    <div id="alert" >
+            <p id="alertMessage"></p>
+        </div>
+    
+        
+</body>
+<style>
+    .log {
+  background-color: rgba(11, 135, 244, 0.85);
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(230, 104, 104, 0.5);
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  margin-left: 80vh;
+
+}
+h1 {
+  margin-bottom: 20px;
+  color: white;
+}
+
+input[type=email],
+input[type=password] {
+  width: 80%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #555;
+  border-radius: 4px;
+  background-color: white;
+  color: black;
+}
+
+button {
+  width: 80%;
+  padding: 12px;
+  background-color: #e50914;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+
+}
+
+button:hover {
+  background-color: #e50914;
+}
+
+</style>
+<script>
+    function validateform(){
+    let email=document.getElementById('email').value;
+    let password=document.getElementById('password').value;
+    let errormessages=document.getElementById('errormessages');
+    errormessages.innerHTML="";
+    let isvalid=true;
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+        errormessages.innerHTML+="Please Enter a Valid email address.<br>";
+        isvalid=false;
+    }
+    if(password.length<6 || password.length>16){
+        errormessages.innerHTML+="Password should be between 6 to 12 characters.<br>";
+        isvalid=false;
+    }
+
+    if(isvalid){
+        alert("LOGIN SUCCESFULLY!!");
+        window.location.href = 'index.html';
+    }
+    }
+</script>
+</html>

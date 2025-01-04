@@ -1,0 +1,39 @@
+
+.p1{
+    padding-top: 20px;
+    padding-left: 40px;
+    background-color:palevioletred;
+    margin-top: 5px;
+    font-size: 25px;
+}
+/* this headline define text property */
+.headline{
+    padding: 20px;
+    margin-top: -70px;
+    padding-left: 80px;
+    padding-bottom: 20px;
+    text-align: center;
+    justify-content: space-between;
+}
+/* this is define display property including hover */
+#aa{
+    margin-top: -20px;
+    word-spacing: 10px;
+    text-decoration: none;
+   padding: 7px;
+    display: inline-block;
+    font-weight: 200px;
+    color: white;
+    
+}
+#aa:hover{
+    color: black;
+     background-color: papayawhip;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0%;
+    width: 100px;
+    padding: 10px;
+}
